@@ -2,1635 +2,494 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>سماء الأمان | اليوم العالمي للطفل</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سماء الأمان — اليوم العالمي للطفل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
+    :root {
+      --bg-deep: #070919;
+      --bg-mid: #111636;
+      --card-bg: rgba(17, 23, 54, 0.86);
+      --border-soft: rgba(255, 255, 255, 0.14);
+      --gold: #fde047;
+      --gold-deep: #f59e0b;
+      --cyan: #38bdf8;
+      --mint: #34d399;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
     }
 
-    html {
-      scroll-behavior: smooth;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      padding: 0;
+      font-family: 'Cairo', 'Tajawal', sans-serif;
       min-height: 100vh;
-      font-family: 'Tajawal', 'Cairo', sans-serif;
-      color: #201a36;
-      background: linear-gradient(175deg, #F8F5FF 0%, #F2FBF7 45%, #FFFDF5 100%);
+      background: radial-gradient(circle at top, #1b2458 0%, var(--bg-deep) 68%);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
       overflow-x: hidden;
     }
 
-    .shape-organic-a { border-radius: 34px 16px 36px 20px; }
-    .shape-organic-b { border-radius: 18px 34px 20px 36px; }
-
-    /* HOME VIEW */
-    #home-view {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 20px 18px 48px;
-    }
-
-    .top-bar {
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(109, 74, 255, 0.16);
-      border-radius: 24px;
-      padding: 12px 18px;
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      box-shadow: 0 14px 34px rgba(34, 24, 78, 0.08);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: 'Cairo', sans-serif;
-      font-weight: 800;
-      font-size: 1.05rem;
-    }
-
-    .brand-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 14px 20px 14px 18px;
-      background: linear-gradient(135deg, #6d4aff, #158068);
-      color: #fff;
-      display: grid;
-      place-items: center;
-    }
-
-    .btn-go {
-      background: linear-gradient(135deg, #6d4aff, #8465ff);
-      color: #fff;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 16px;
-      font-family: 'Cairo', sans-serif;
-      font-weight: 800;
-      font-size: 0.98rem;
-      cursor: pointer;
-      box-shadow: 0 10px 22px rgba(109, 74, 255, 0.25);
-      transition: transform 0.16s ease;
-    }
-
-    .btn-go:hover { transform: translateY(-2px); }
-
-    .hero-box {
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(109, 74, 255, 0.16);
-      border-radius: 30px 44px 30px 44px;
-      padding: 32px 24px;
-      box-shadow: 0 14px 34px rgba(34, 24, 78, 0.08);
-      margin-bottom: 34px;
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 24px;
-      align-items: center;
-    }
-
-    @media (max-width: 840px) {
-      .hero-box { grid-template-columns: 1fr; border-radius: 26px; }
-    }
-
-    .pill-tag {
-      display: inline-block;
-      background: #ebe5ff;
-      color: #6d4aff;
-      font-weight: 700;
-      font-size: 0.85rem;
-      padding: 5px 14px;
-      border-radius: 999px;
-      margin-bottom: 12px;
-    }
-
-    .hero-box h1 {
-      font-family: 'Cairo', sans-serif;
-      font-size: clamp(1.75rem, 3.8vw, 2.55rem);
-      margin: 0 0 10px;
-      line-height: 1.25;
-    }
-
-    .hero-box p { margin: 0 0 20px; color: #5f587c; }
-
-    .hero-sky-card {
-      background: linear-gradient(165deg, #0e0b26, #2b356e);
-      color: #fff;
-      border-radius: 34px 22px 38px 24px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 14px 34px rgba(34, 24, 78, 0.12);
-    }
-
-    section { margin-bottom: 36px; }
-    .sec-title h2 { font-family: 'Cairo', sans-serif; margin: 0 0 4px; font-size: 1.48rem; }
-    .sec-title p { margin: 0 0 16px; color: #5f587c; font-size: 0.94rem; }
-
-    .cards-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
-
-    .info-card {
-      background: #fff;
-      border: 1px solid rgba(109, 74, 255, 0.16);
-      padding: 20px;
-      box-shadow: 0 14px 34px rgba(34, 24, 78, 0.08);
-    }
-
-    .info-card h3 { font-family: 'Cairo', sans-serif; margin: 0 0 8px; font-size: 1.08rem; color: #6d4aff; }
-    .info-card p { margin: 0; font-size: 0.92rem; color: #5f587c; }
-
-    .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
-    .pillar-box { border: 1px solid rgba(109, 74, 255, 0.16); padding: 18px 14px; text-align: center; box-shadow: 0 14px 34px rgba(34, 24, 78, 0.08); }
-    .pillar-box:nth-child(1) { background: #f2f8ff; border-radius: 26px 14px 24px 16px; }
-    .pillar-box:nth-child(2) { background: #fff9e4; border-radius: 16px 26px 16px 24px; }
-    .pillar-box:nth-child(3) { background: #e9faf3; border-radius: 22px 22px 12px 26px; }
-    .pillar-box:nth-child(4) { background: #f4eeff; border-radius: 14px 24px 26px 14px; }
-    .pillar-box:nth-child(5) { background: #fff0f6; border-radius: 24px 14px 20px 26px; }
-    .pillar-box h3 { font-family: 'Cairo', sans-serif; margin: 0 0 4px; font-size: 1rem; }
-    .pillar-box span { font-size: 0.85rem; color: #5f587c; }
-
-    .harm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
-    .harm-card { background: #fff; border: 1px solid rgba(190, 38, 88, 0.2); border-radius: 24px 16px 26px 18px; padding: 18px; box-shadow: 0 14px 34px rgba(34, 24, 78, 0.08); }
-    .harm-card h3 { font-family: 'Cairo', sans-serif; margin: 0 0 8px; font-size: 1.05rem; color: #be2658; }
-    .harm-ex { background: #ffe4ed; color: #7a1436; border-radius: 14px; padding: 10px 12px; font-size: 0.88rem; margin-bottom: 8px; }
-    .harm-eff { margin: 0; font-size: 0.86rem; color: #5f587c; }
-
-    .home-footer {
-      text-align: center;
-      padding: 22px 14px 10px;
-      margin-top: 24px;
-      border-top: 1px solid rgba(109, 74, 255, 0.16);
-      font-family: 'Cairo', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: #5f587c;
-    }
-
-    /* INTERACTIVE SKY EXPERIENCE VIEW */
-    #experience-view {
-      display: none;
-      position: fixed;
-      inset: 0;
+    .app-container {
       width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: 10;
-      user-select: none;
+      max-width: 780px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 26px;
+      padding: 28px 22px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(12px);
     }
 
-    #experience-view.active {
+    .screen {
+      display: none;
+      animation: fadeIn 0.35s ease;
+    }
+
+    .screen.active {
       display: block;
     }
 
-    #sky-backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      transition: background 1.4s cubic-bezier(0.22, 1, 0.36, 1);
-      background: linear-gradient(180deg, #0e0b26 0%, #1c1947 45%, #2b356e 85%, #3c528a 100%);
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    #sky-backdrop[data-stage="1"] { background: linear-gradient(180deg, #17123b 0%, #2b2363 45%, #474a8c 85%, #6576ab 100%); }
-    #sky-backdrop[data-stage="2"] { background: linear-gradient(180deg, #251d59 0%, #433482 45%, #6d5f9e 82%, #978ab8 100%); }
-    #sky-backdrop[data-stage="3"] { background: linear-gradient(180deg, #3b2d7a 0%, #684d9c 42%, #a67ba8 80%, #d9a7b0 100%); }
-    #sky-backdrop[data-stage="4"] { background: linear-gradient(180deg, #59469e 0%, #986eb3 40%, #d99cb3 78%, #f7cba8 100%); }
-    #sky-backdrop[data-stage="5"] { background: linear-gradient(180deg, #7e6cc4 0%, #bfa0d9 38%, #f2c4cf 76%, #fce3b4 100%); }
-    #sky-backdrop[data-stage="6"] { background: linear-gradient(180deg, #9ec5f8 0%, #d4c4fb 38%, #fbd5e5 75%, #fff0c2 100%); }
-
-    #fx-canvas {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 25;
+    .badge {
+      display: inline-block;
+      background: rgba(253, 224, 71, 0.14);
+      color: var(--gold);
+      border: 1px solid rgba(253, 224, 71, 0.35);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 14px;
     }
 
-    #stars-canvas {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .ambient-cloud {
-      position: absolute;
-      pointer-events: none;
-      opacity: 0.14;
-      filter: blur(2px);
-      animation: driftSlow linear infinite;
-      transition: opacity 1.2s ease, filter 1.2s ease;
-    }
-
-    #sky-backdrop[data-stage="5"] .ambient-cloud,
-    #sky-backdrop[data-stage="6"] .ambient-cloud {
-      opacity: 0.45;
-      filter: blur(0px);
-    }
-
-    @keyframes driftSlow {
-      0% { transform: translateX(-15vw); }
-      50% { transform: translateX(15vw); }
-      100% { transform: translateX(-15vw); }
-    }
-
-    @keyframes cloudFloat {
-      0%, 100% { transform: translateY(0px) scale(1); }
-      50% { transform: translateY(-9px) scale(1.015); }
-    }
-
-    .central-cloud-float {
-      animation: cloudFloat 5.5s ease-in-out infinite;
-    }
-
-    .fog-layer {
-      transition: opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1), transform 1.1s cubic-bezier(0.22, 1, 0.36, 1), filter 0.95s ease;
-      transform-origin: center;
-    }
-
-    .fog-dispersed {
-      opacity: 0 !important;
-      transform: scale(1.38) translateY(-18px) !important;
-      filter: blur(12px) !important;
-      pointer-events: none;
-    }
-
-    #pastel-rainbow {
-      transition: opacity 1.3s ease, transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);
-      transform-origin: 50% 85%;
-    }
-
-    .glass-orb {
-      position: absolute;
-      touch-action: none;
-      cursor: grab;
-      border-radius: 9999px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, opacity 0.45s ease;
-      will-change: transform, left, top;
-      z-index: 20;
-    }
-
-    .glass-orb:hover { transform: scale(1.07); z-index: 30; }
-    .glass-orb:active { cursor: grabbing; }
-    .glass-orb.is-dragging { transition: none !important; z-index: 50 !important; transform: scale(1.12); }
-
-    .orb-positive {
-      background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.58) 0%, rgba(233, 213, 255, 0.26) 55%, rgba(167, 139, 250, 0.22) 100%);
-      border: 1.5px solid rgba(255, 255, 255, 0.65);
-      box-shadow: 0 10px 28px rgba(15, 12, 41, 0.28), inset 0 2px 10px rgba(255, 255, 255, 0.65), 0 0 20px rgba(192, 132, 252, 0.28);
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.3rem);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 12px;
       color: #ffffff;
-      text-shadow: 0 1px 6px rgba(23, 15, 56, 0.55);
     }
 
-    .orb-negative {
-      background: radial-gradient(circle at 32% 28%, rgba(226, 232, 240, 0.38) 0%, rgba(100, 116, 139, 0.32) 60%, rgba(51, 65, 85, 0.42) 100%);
-      border: 1.5px solid rgba(203, 213, 225, 0.45);
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.35), inset 0 2px 8px rgba(255, 255, 255, 0.35);
-      color: #f8fafc;
-      text-shadow: 0 1px 6px rgba(15, 23, 42, 0.65);
+    h2 {
+      font-size: clamp(1.35rem, 3.2vw, 1.8rem);
+      font-weight: 800;
+      margin-bottom: 10px;
     }
 
-    @keyframes stormShake {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      15% { transform: translate(-9px, -2px) rotate(-4deg) scale(1.04); }
-      30% { transform: translate(9px, 2px) rotate(4deg) scale(1.04); }
-      45% { transform: translate(-7px, 1px) rotate(-3deg); }
-      60% { transform: translate(7px, -1px) rotate(3deg); }
-      75% { transform: translate(-4px, 0) rotate(-1deg); }
+    p.lead {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      margin-bottom: 22px;
     }
 
-    .orb-storm-evaporate {
-      animation: stormShake 0.48s ease-in-out;
-      background: radial-gradient(circle, rgba(254, 240, 138, 0.55) 0%, rgba(71, 85, 105, 0.6) 100%) !important;
-      border-color: rgba(253, 224, 71, 0.85) !important;
-      box-shadow: 0 0 28px rgba(250, 204, 21, 0.65) !important;
-      pointer-events: none;
+    .input-group {
+      margin-bottom: 20px;
     }
 
-    @keyframes orbitStarPop {
-      0% { opacity: 0; transform: scale(0.3) rotate(-25deg); }
-      70% { opacity: 1; transform: scale(1.12) rotate(6deg); }
-      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--gold);
     }
 
-    .orbit-star-badge {
-      animation: orbitStarPop 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(254, 249, 195, 0.88) 100%);
-      border: 1.5px solid rgba(251, 191, 36, 0.75);
-      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.28), inset 0 1px 4px #ffffff;
-      color: #4c3575;
+    input[type="text"] {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(7, 9, 25, 0.75);
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
     }
 
-    .cloud-drop-active {
-      filter: drop-shadow(0 0 28px rgba(253, 224, 71, 0.75)) brightness(1.08);
-      transform: scale(1.04);
+    input[type="text"]:focus {
+      border-color: var(--gold);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 14px;
+      border: none;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.15s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+      color: #0b0e1f;
+      box-shadow: 0 10px 24px rgba(245, 158, 11, 0.3);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .sky-board {
+      position: relative;
+      min-height: 290px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #090d26 0%, #172254 65%, #1e2f6b 100%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 20px;
+      margin: 18px 0 22px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+      gap: 14px;
+      align-content: center;
+    }
+
+    .star-node {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px dashed rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      padding: 16px 10px;
+      text-align: center;
+      cursor: pointer;
       transition: all 0.25s ease;
     }
 
-    @keyframes modalReveal {
-      0% { opacity: 0; transform: translateY(20px) scale(0.95); }
-      100% { opacity: 1; transform: translateY(0) scale(1); }
+    .star-node.lit {
+      background: rgba(253, 224, 71, 0.16);
+      border: 1px solid rgba(253, 224, 71, 0.7);
+      box-shadow: 0 0 20px rgba(253, 224, 71, 0.25);
     }
 
-    .modal-card-anim { animation: modalReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-
-    @keyframes skillPopIn {
-      0% { opacity: 0; transform: translateY(16px) scale(0.95); }
-      100% { opacity: 1; transform: translateY(0) scale(1); }
+    .star-icon {
+      font-size: 1.8rem;
+      display: block;
+      margin-bottom: 6px;
     }
 
-    .skill-modal-anim { animation: skillPopIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-
-    @keyframes gentleNudge {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-6px); }
-      75% { transform: translateX(6px); }
+    .star-label {
+      font-size: 0.9rem;
+      font-weight: 700;
     }
 
-    .nudge-shake { animation: gentleNudge 0.32s ease-in-out; }
-
-    input[type="range"].pastel-slider {
-      -webkit-appearance: none;
-      appearance: none;
+    .progress-bar {
       width: 100%;
-      height: 12px;
-      border-radius: 9999px;
-      background: linear-gradient(90deg, #e9d5ff 0%, #fbcfe8 50%, #fef08a 100%);
-      outline: none;
-      touch-action: none;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 14px;
     }
 
-    input[type="range"].pastel-slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 28px;
-      height: 28px;
-      border-radius: 9999px;
-      background: #ffffff;
-      border: 3px solid #8b5cf6;
-      box-shadow: 0 4px 14px rgba(109, 40, 217, 0.35);
-      cursor: pointer;
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--cyan), var(--gold));
+      transition: width 0.3s ease;
     }
 
-    /* Certificate Sheet with IMG_1237.jpeg Background & Centered Dynamic Name */
-    .cert-poster-frame {
+    .certificate-wrapper {
       position: relative;
       width: 100%;
-      max-width: 440px;
+      max-width: 480px;
       aspect-ratio: 3 / 4;
-      border-radius: 1.5rem;
+      margin: 18px auto 22px;
+      border-radius: 20px;
       overflow: hidden;
-      background: #0b0d24;
       border: 2px solid rgba(253, 224, 71, 0.55);
-      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.7), 0 0 40px rgba(250, 204, 21, 0.16);
+      background: #0b0d24;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.55);
     }
 
-    .cert-poster-img {
+    .certificate-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    .cert-name-overlay {
+    .certificate-name-overlay {
       position: absolute;
       left: 50%;
       top: 44.5%;
       transform: translate(-50%, -50%);
-      width: 82%;
+      width: 86%;
       text-align: center;
-      font-family: 'Cairo', 'Tajawal', sans-serif;
+      color: var(--gold);
       font-weight: 900;
-      font-size: clamp(1.35rem, 5.2vw, 2.15rem);
-      color: #fde047;
-      text-shadow: 0 3px 14px rgba(2, 6, 23, 0.92), 0 0 18px rgba(253, 224, 71, 0.35);
-      line-height: 1.25;
+      font-size: clamp(1.25rem, 4.2vw, 2.2rem);
+      text-shadow: 0 3px 14px rgba(2, 6, 23, 0.92);
       pointer-events: none;
-      word-break: break-word;
+      line-height: 1.3;
+    }
+
+    .missing-image-box {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      background: rgba(11, 13, 36, 0.92);
+      color: #fecaca;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .missing-image-box.visible {
+      display: flex;
+    }
+
+    .actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .status-note {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--mint);
+      min-height: 22px;
     }
   </style>
 </head>
 <body>
+  <main class="app-container">
+    <!-- الشاشة الأولى: البداية وإدخال الاسم -->
+    <section id="screen-intro" class="screen active">
+      <span class="badge">اليوم العالمي للطفل • سماء الأمان</span>
+      <h1>اصنع سماء أمان مليئة بالحقوق والأمل</h1>
+      <p class="lead">
+        أهلاً بكِ في تجربة «سماء الأمان». أضيئي النجوم الخمس التي تمثل ركائز حماية الطفولة ورعايتها، وفي النهاية ستظهر شهادتكِ باسمكِ جاهزة للحفظ.
+      </p>
 
-  <!-- PAGE 1: HOME -->
-  <div id="home-view">
-    <header class="top-bar">
-      <div class="brand">
-        <span class="brand-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
-          </svg>
-        </span>
-        <span>سماء الأمان</span>
-      </div>
-      <button type="button" class="btn-go open-sky-btn">ابدأ التجربة</button>
-    </header>
-
-    <section class="hero-box">
-      <div>
-        <span class="pill-tag">٢٠ نوفمبر • اليوم العالمي للطفل</span>
-        <h1>سماء الأمان: من سماءٍ يغشاها الضباب إلى سماءٍ تحمي الطفل</h1>
-        <p>
-          اضغط على «ابدأ التجربة» للانتقال إلى واجهة السماء والغيمة والفقاعات؛ المس الفقاعات المضيئة أو اسحبها نحو الغيمة لتبديد الضباب وإشراق السماء.
-        </p>
-        <button type="button" class="btn-go open-sky-btn">ابدأ التجربة</button>
+      <div class="input-group">
+        <label for="name-input">اكتبي اسمكِ ليظهر على الشهادة:</label>
+        <input type="text" id="name-input" placeholder="مثال: سديم" maxlength="45" />
       </div>
 
-      <div class="hero-sky-card">
-        <svg width="210" height="120" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M62 118H204C222 118 236 104 236 86C236 69 223 56 206 55C199 28 175 10 147 10C115 10 89 33 86 63C80 60 73 59 65 59C44 59 27 76 27 97C27 109 36 118 62 118Z" fill="#ffffff" fill-opacity="0.92"/>
-          <path d="M130 14L133.5 22L142 23L135.8 28.5L137.6 37L130 32.5L122.4 37L124.2 28.5L118 23L126.5 22L130 14Z" fill="#FDE047"/>
-        </svg>
-        <div style="font-weight:700; font-size:0.9rem; margin-top:4px;">سماء تشرق بإثبات القيم الداعمة</div>
+      <button type="button" class="btn btn-gold" id="start-btn">ابدأي التجربة ✨</button>
+    </section>
+
+    <!-- الشاشة الثانية: التفاعل وإضاءة النجوم -->
+    <section id="screen-play" class="screen">
+      <span class="badge">الخطوة الثانية • إضاءة سماء الأمان</span>
+      <h2>اضغطي على كل نجمة لتضيئي سماء الطفل</h2>
+      <p class="lead" id="progress-text">تم إضاءة 0 من 5 نجوم</p>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <div class="sky-board" id="sky-board"></div>
+
+      <div class="actions-row">
+        <button type="button" class="btn btn-gold" id="to-cert-btn" disabled>عرض الشهادة 🎓</button>
+        <button type="button" class="btn btn-secondary" id="back-intro-btn">تعديل الاسم</button>
       </div>
     </section>
 
-    <section id="why-named">
-      <div class="sec-title">
-        <h2>لماذا سُمي باليوم العالمي للطفل؟</h2>
-        <p>شرح مبسط لمعنى التسمية وتاريخها وهدفها العملي.</p>
+    <!-- الشاشة الثالثة: عرض الشهادة وحفظها -->
+    <section id="screen-cert" class="screen">
+      <span class="badge">شهادة سماء الأمان</span>
+      <h2>مبارك إتمامكِ تجربة سماء الأمان 🌟</h2>
+
+      <div class="certificate-wrapper" id="certificate-wrapper">
+        <img id="cert-bg-img" src="IMG_1237.jpeg" alt="شهادة سماء الأمان" />
+        <div class="certificate-name-overlay" id="cert-name-display">صانع سماء الأمان</div>
+        <div class="missing-image-box" id="missing-image-box">
+          <strong>تعذّر العثور على ملف الصورة IMG_1237.jpeg</strong>
+          <span>تأكدي من وجود الملف بنفس الاسم في نفس مجلد ملف index.html</span>
+        </div>
       </div>
-      <div class="cards-3">
-        <article class="info-card shape-organic-a">
-          <h3>لماذا سُمي بهذا الاسم؟</h3>
-          <p>سُمي «اليوم العالمي للطفل» ليكون يوماً مخصصاً للطفل في كل مكان، يذكّر الأسرة والمدرسة والمجتمع بأن للطفل حقوقاً وبيئة يجب صونها.</p>
-        </article>
-        <article class="info-card shape-organic-b">
-          <h3>لماذا ٢٠ نوفمبر؟</h3>
-          <p>لأن تاريخ ٢٠ نوفمبر شهد إعلان حقوق الطفل عام ١٩٥٩ واعتماد اتفاقية حقوق الطفل عام ١٩٨٩ بوصفهما مرجعاً دولياً لحماية الطفولة.</p>
-        </article>
-        <article class="info-card shape-organic-a">
-          <h3>ما أثره في حياة الطفل؟</h3>
-          <p>تحويل الرعاية إلى سلوك يومي: إنصات صادق، أمان نفسي وجسدي، مساحة للعب والتعلم، وتجنب كل ما يضر الطفل.</p>
-        </article>
+
+      <div class="actions-row">
+        <button type="button" class="btn btn-gold" id="save-cert-btn">حفظ الشهادة كصورة 📥</button>
+        <button type="button" class="btn btn-secondary" id="restart-btn">إعادة التجربة ↻</button>
       </div>
+      <div class="status-note" id="save-status"></div>
     </section>
-
-    <section>
-      <div class="sec-title">
-        <h2>ركائز أساسية لحياة الطفل</h2>
-        <p>عناصر متكاملة تدعم طفولة متوازنة.</p>
-      </div>
-      <div class="pillars-grid">
-        <div class="pillar-box"><h3>التعليم</h3><span>تعلّم ينمّي الفضول والوعي</span></div>
-        <div class="pillar-box"><h3>اللعب والراحة</h3><span>مساحة حرة للابتكار والهدوء</span></div>
-        <div class="pillar-box"><h3>الصحة</h3><span>عناية جسدية ونفسية متوازنة</span></div>
-        <div class="pillar-box"><h3>الحماية</h3><span>أمان من الأذى والإهمال</span></div>
-        <div class="pillar-box"><h3>التعبير</h3><span>استماع واحترام للرأي</span></div>
-      </div>
-    </section>
-
-    <section>
-      <div class="sec-title">
-        <h2>أمثلة على السلوك الضار</h2>
-        <p>سلوكيات مؤثرة سلباً على الطفل مع أمثلة واقعية واضحة.</p>
-      </div>
-      <div class="harm-grid">
-        <article class="harm-card">
-          <h3>المقارنة بالآخرين</h3>
-          <div class="harm-ex">مثال: «لماذا لا تكون مثل زميلك الذي ينهي كل شيء بسرعة؟»</div>
-          <p class="harm-eff">تضعف ثقة الطفل بنفسه وتجعله يشعر بالنقص.</p>
-        </article>
-        <article class="harm-card">
-          <h3>السخرية والاستهزاء</h3>
-          <div class="harm-ex">مثال: الضحك بتهكم على إجابة الطفل أو وصف سؤاله بأنه «تافه».</div>
-          <p class="harm-eff">تمنع الطفل من المشاركة وطلب المساعدة.</p>
-        </article>
-        <article class="harm-card">
-          <h3>الصراخ والتخويف</h3>
-          <div class="harm-ex">مثال: رفع الصوت أو التهديد لتعديل خطأ بسيط.</div>
-          <p class="harm-eff">تولّد الخوف والتوتر بدل الفهم الواعي.</p>
-        </article>
-        <article class="harm-card">
-          <h3>التجاهل والإهمال</h3>
-          <div class="harm-ex">مثال: مقاطعة الطفل بـ «ليس الآن» باستمرار عند حديثه.</div>
-          <p class="harm-eff">تشعر الطفل بأن مشاعره غير مسموعة.</p>
-        </article>
-      </div>
-    </section>
-
-    <footer class="home-footer">
-      إعداد سديم العنزي • مدرسة الموهوبين الثانوية للبنات
-    </footer>
-  </div>
-
-  <!-- PAGE 2: INTERACTIVE SKY EXPERIENCE -->
-  <div id="experience-view">
-    <div id="sky-backdrop" data-stage="0">
-      <svg class="ambient-cloud top-[10%] left-[8%] w-48 sm:w-64" style="animation-duration: 28s;" viewBox="0 0 200 80" fill="none">
-        <path d="M45 68H158C176 68 190 55 190 38C190 22 178 10 162 9C155 -4 138 -5 126 5C114 -5 93 -3 84 11C69 10 56 20 54 34C37 35 25 46 25 54C25 63 34 68 45 68Z" fill="white"/>
-      </svg>
-      <svg class="ambient-cloud top-[22%] right-[6%] w-56 sm:w-72" style="animation-duration: 34s; animation-delay: -8s;" viewBox="0 0 200 80" fill="none">
-        <path d="M45 68H158C176 68 190 55 190 38C190 22 178 10 162 9C155 -4 138 -5 126 5C114 -5 93 -3 84 11C69 10 56 20 54 34C37 35 25 46 25 54C25 63 34 68 45 68Z" fill="white"/>
-      </svg>
-      <svg class="ambient-cloud bottom-[14%] left-[12%] w-52 sm:w-72" style="animation-duration: 31s; animation-delay: -14s;" viewBox="0 0 200 80" fill="none">
-        <path d="M45 68H158C176 68 190 55 190 38C190 22 178 10 162 9C155 -4 138 -5 126 5C114 -5 93 -3 84 11C69 10 56 20 54 34C37 35 25 46 25 54C25 63 34 68 45 68Z" fill="white"/>
-      </svg>
-    </div>
-
-    <canvas id="stars-canvas"></canvas>
-    <canvas id="fx-canvas"></canvas>
-
-    <!-- Top HUD Header -->
-    <header class="fixed top-0 inset-x-0 z-30 flex items-center justify-between px-4 sm:px-8 pt-4 pb-2 pointer-events-none">
-      <div class="pointer-events-auto flex items-center gap-2">
-        <button id="btn-back-home" type="button" class="px-3.5 py-2 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 shadow-lg text-white font-bold text-xs sm:text-sm transition cursor-pointer">
-          ← العودة
-        </button>
-        <div class="flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 shadow-lg">
-          <span class="w-2.5 h-2.5 rounded-full bg-amber-300 shadow-[0_0_10px_#fde047]"></span>
-          <span class="font-extrabold text-sm sm:text-base text-white drop-shadow">سماء الأمان</span>
-        </div>
-      </div>
-
-      <div class="pointer-events-auto flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-md border border-white/25 shadow-lg">
-        <div id="hud-stars" class="flex items-center gap-1"></div>
-        <span id="hud-counter" class="font-bold text-xs sm:text-sm text-white/95 mr-1">0 / 6</span>
-      </div>
-    </header>
-
-    <!-- Floating Supportive Message Banner -->
-    <div id="storm-message-wrap" class="fixed top-20 inset-x-0 z-40 flex justify-center px-4 pointer-events-none">
-      <div id="storm-message" class="opacity-0 -translate-y-2 transition-all duration-400 px-5 py-2.5 rounded-full bg-slate-900/75 backdrop-blur-md border border-amber-300/40 text-amber-100 text-sm sm:text-base font-bold shadow-xl flex items-center gap-2">
-        <svg class="w-4 h-4 text-amber-300 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-        </svg>
-        <span id="storm-message-text"></span>
-      </div>
-    </div>
-
-    <!-- Main Interactive Sky Arena -->
-    <main id="sky-arena" class="relative z-10 w-full h-full flex items-center justify-center">
-      <div id="central-cloud-wrapper" class="central-cloud-float relative flex items-center justify-center w-[320px] h-[270px] sm:w-[440px] sm:h-[340px] md:w-[500px] md:h-[370px] transition-transform duration-300">
-        <svg id="central-cloud-svg" class="w-full h-full overflow-visible" viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="cloudSunAura" cx="50%" cy="52%" r="50%">
-              <stop offset="0%" stop-color="#FEF08A" stop-opacity="0.75"/>
-              <stop offset="55%" stop-color="#F5D0FE" stop-opacity="0.32"/>
-              <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="cloudBackGrad" x1="260" y1="90" x2="260" y2="280" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#F3E8FF"/>
-              <stop offset="100%" stop-color="#D8B4FE"/>
-            </linearGradient>
-            <linearGradient id="cloudFrontGrad" x1="260" y1="105" x2="260" y2="295" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#FFFFFF"/>
-              <stop offset="68%" stop-color="#F8F5FF"/>
-              <stop offset="100%" stop-color="#E2D4FC"/>
-            </linearGradient>
-            <linearGradient id="fogDarkGrad1" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#475569" stop-opacity="0.92"/>
-              <stop offset="100%" stop-color="#1E293B" stop-opacity="0.96"/>
-            </linearGradient>
-            <linearGradient id="fogDarkGrad2" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#64748B" stop-opacity="0.88"/>
-              <stop offset="100%" stop-color="#334155" stop-opacity="0.94"/>
-            </linearGradient>
-            <filter id="cloud3DShadow" x="-20%" y="-20%" width="140%" height="150%">
-              <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#1E1B4B" flood-opacity="0.28"/>
-              <feDropShadow dx="0" dy="-4" stdDeviation="8" flood-color="#FFFFFF" flood-opacity="0.6"/>
-            </filter>
-            <filter id="fogBlur" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="3.5"/>
-            </filter>
-          </defs>
-
-          <circle id="cloud-aura-circle" cx="260" cy="195" r="185" fill="url(#cloudSunAura)" opacity="0.15" style="transition: opacity 1.1s ease;"/>
-
-          <g id="pastel-rainbow" opacity="0" style="transform: scale(0.86);">
-            <path d="M 95 235 A 165 155 0 0 1 425 235" stroke="#FCA5A5" stroke-width="11" stroke-linecap="round" opacity="0.72"/>
-            <path d="M 107 235 A 153 143 0 0 1 413 235" stroke="#FDE047" stroke-width="11" stroke-linecap="round" opacity="0.75"/>
-            <path d="M 119 235 A 141 131 0 0 1 401 235" stroke="#86EFAC" stroke-width="11" stroke-linecap="round" opacity="0.72"/>
-            <path d="M 131 235 A 129 119 0 0 1 389 235" stroke="#93C5FD" stroke-width="11" stroke-linecap="round" opacity="0.75"/>
-            <path d="M 143 235 A 117 107 0 0 1 377 235" stroke="#D8B4FE" stroke-width="11" stroke-linecap="round" opacity="0.78"/>
-          </g>
-
-          <path d="M135 268H385C424 268 455 239 455 202C455 168 429 140 395 136C382 95 342 68 298 74C268 46 218 48 190 80C152 78 118 104 112 141C79 147 56 175 56 208C56 243 87 268 135 268Z"
-                fill="url(#cloudBackGrad)" opacity="0.88"/>
-
-          <g filter="url(#cloud3DShadow)">
-            <path d="M128 282H392C434 282 468 250 468 210C468 173 439 143 402 139C388 94 345 64 297 71C264 41 210 43 180 78C139 76 102 104 96 144C60 151 36 181 36 217C36 255 71 282 128 282Z"
-                  fill="url(#cloudFrontGrad)"/>
-            <path d="M112 146C118 112 148 89 183 91C211 59 260 57 291 84C334 78 373 105 386 145"
-                  stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
-          </g>
-
-          <g id="fog-layers-group" filter="url(#fogBlur)">
-            <path id="fog-1" class="fog-layer" d="M85 185H235C258 185 275 168 275 147C275 128 260 112 240 110C230 85 204 70 177 75C156 59 125 61 108 81C83 80 62 97 59 120C39 124 25 141 25 161C25 176 48 185 85 185Z" fill="url(#fogDarkGrad1)"/>
-            <path id="fog-2" class="fog-layer" d="M255 182H425C450 182 470 163 470 140C470 119 453 102 431 100C420 73 391 57 361 62C338 45 304 47 285 69C258 68 235 86 231 111C209 115 194 134 194 156C194 172 218 182 255 182Z" fill="url(#fogDarkGrad2)"/>
-            <path id="fog-3" class="fog-layer" d="M155 215H365C392 215 414 194 414 169C414 146 395 127 371 125C359 95 327 77 294 83C269 64 231 66 210 90C180 89 154 109 150 136C125 141 109 161 109 185C109 203 128 215 155 215Z" fill="url(#fogDarkGrad1)"/>
-            <path id="fog-4" class="fog-layer" d="M62 292H248C274 292 294 273 294 249C294 227 277 209 254 207C243 179 214 162 183 167C159 149 124 151 104 174C76 173 52 192 48 218C25 223 10 242 10 264C10 281 31 292 62 292Z" fill="url(#fogDarkGrad2)"/>
-            <path id="fog-5" class="fog-layer" d="M258 294H448C475 294 496 274 496 249C496 226 478 208 454 206C443 177 412 159 380 165C355 146 319 148 298 172C269 171 244 190 240 217C216 222 200 242 200 265C200 282 224 294 258 294Z" fill="url(#fogDarkGrad1)"/>
-            <path id="fog-6" class="fog-layer" d="M138 278H382C412 278 436 256 436 228C436 202 415 181 388 179C375 146 340 126 303 132C275 111 233 113 210 140C177 139 148 161 143 191C116 196 98 219 98 245C98 265 115 278 138 278Z" fill="url(#fogDarkGrad2)"/>
-          </g>
-        </svg>
-
-        <div id="orbit-stars-container" class="absolute inset-0 flex flex-wrap items-center justify-center content-center gap-2 px-10 pt-10 pb-6 pointer-events-none"></div>
-      </div>
-
-      <div id="orbs-layer" class="fixed inset-0 z-20 pointer-events-none"></div>
-    </main>
-
-    <!-- STEP 1 OVERLAY: NAME PROMPT ("ما اسمك؟") -->
-    <div id="name-prompt-overlay" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/65 backdrop-blur-md">
-      <div class="skill-modal-anim relative w-full max-w-md rounded-[2rem] bg-gradient-to-b from-white/95 via-purple-50/95 to-amber-50/95 border border-white shadow-[0_28px_80px_rgba(30,27,75,0.5)] p-6 sm:p-8 text-indigo-950">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-100 text-purple-900 font-extrabold text-xs mb-3">
-          <span>✦ اليوم العالمي للطفل • ٢٠ نوفمبر</span>
-        </div>
-
-        <h2 class="text-2xl sm:text-3xl font-black text-indigo-950 mb-2">
-          ما اسمك؟
-        </h2>
-
-        <p class="text-sm sm:text-base font-bold text-purple-900/90 leading-relaxed mb-5">
-          اكتب اسمك ليظهر تلقائياً في منتصف الشهادة عند إتمام إضاءة السماء.
-        </p>
-
-        <label for="user-name-input" class="block text-xs font-extrabold text-slate-700 mb-1.5">اكتب اسمك</label>
-        <input
-          id="user-name-input"
-          type="text"
-          maxlength="40"
-          class="w-full px-4 py-3 rounded-2xl border-2 border-purple-200 focus:border-purple-600 bg-white text-indigo-950 font-extrabold text-base outline-none transition mb-2"
-        />
-        <p id="name-prompt-error" class="min-h-[1.25rem] text-xs font-bold text-rose-600 mb-3"></p>
-
-        <button id="btn-submit-name" type="button" class="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-l from-purple-600 via-indigo-500 to-amber-400 text-white font-extrabold text-base sm:text-lg shadow-[0_10px_26px_rgba(124,58,237,0.32)] hover:brightness-105 active:scale-[0.98] transition cursor-pointer">
-          ابدأ إشراق السماء ✨
-        </button>
-      </div>
-    </div>
-
-    <!-- Completion Screen with IMG_1237.jpeg Certificate + Centered Dynamic Name -->
-    <div id="end-overlay" class="hidden fixed inset-0 z-50 flex flex-col items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-md overflow-y-auto transition-opacity duration-700">
-      <div class="modal-card-anim w-full max-w-md flex flex-col items-center gap-4 my-auto">
-        <div id="certificate-card" class="cert-poster-frame">
-          <img id="cert-bg-image" src="IMG_1237.jpeg" alt="شهادة صانع سماء الأمان" class="cert-poster-img" />
-          <div id="cert-recipient-name" class="cert-name-overlay"></div>
-          <div id="cert-img-fallback" class="hidden absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-slate-950/90 text-white">
-            <p class="text-sm font-bold text-amber-300 mb-2">تعذّر العثور على ملف الصورة IMG_1237.jpeg</p>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              ضعي ملف الصورة IMG_1237.jpeg في نفس مجلد ملف index.html أو عدّلي CERTIFICATE_IMAGE_SRC في الكود.
-            </p>
-          </div>
-        </div>
-
-        <div class="w-full flex flex-col sm:flex-row items-center justify-center gap-3">
-          <button id="btn-download-cert" type="button" class="w-full sm:w-auto px-6 py-3 rounded-2xl bg-gradient-to-l from-amber-400 to-yellow-300 hover:brightness-105 active:scale-95 text-slate-950 font-black text-sm sm:text-base shadow-[0_10px_28px_rgba(250,204,21,0.35)] transition cursor-pointer">
-            حفظ الشهادة كصورة 📥
-          </button>
-
-          <button id="btn-replay" type="button" class="w-full sm:w-auto px-6 py-3 rounded-2xl bg-white/15 hover:bg-white/25 border border-white/25 active:scale-95 text-white font-extrabold text-sm sm:text-base transition cursor-pointer">
-            إعادة التجربة ↻
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Skill Proof Modal -->
-    <div id="skill-proof-overlay" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/55 backdrop-blur-md transition-opacity duration-300">
-      <div id="skill-proof-card" class="skill-modal-anim relative w-full max-w-lg rounded-[2rem] bg-gradient-to-b from-white/95 via-purple-50/95 to-pink-50/95 backdrop-blur-xl border border-white shadow-[0_28px_80px_rgba(30,27,75,0.45)] p-6 sm:p-8 text-indigo-950 overflow-hidden">
-        <div class="flex items-center justify-between gap-3 mb-4">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/90 border border-purple-200 text-purple-900 font-extrabold text-xs sm:text-sm">
-            <span id="skill-proof-icon" class="w-4 h-4 text-amber-500"></span>
-            <span id="skill-proof-title">إثبات المهارة</span>
-          </div>
-
-          <button id="btn-close-skill" type="button" aria-label="إغلاق" class="w-9 h-9 rounded-full bg-slate-200/75 hover:bg-slate-300/80 active:scale-95 flex items-center justify-center text-slate-700 font-bold text-base transition cursor-pointer">
-            ✕
-          </button>
-        </div>
-
-        <p id="skill-proof-prompt" class="text-sm sm:text-base font-bold text-slate-700 leading-relaxed mb-5"></p>
-        <div id="skill-proof-body" class="space-y-3 mb-6"></div>
-        <p id="skill-proof-feedback" class="min-h-[1.5rem] text-xs sm:text-sm font-bold text-center text-rose-600 mb-4"></p>
-
-        <button id="btn-confirm-skill" type="button" class="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-l from-purple-600 via-fuchsia-500 to-amber-400 text-white font-extrabold text-base sm:text-lg shadow-[0_10px_26px_rgba(147,51,234,0.32)] hover:brightness-105 active:scale-[0.98] transition cursor-pointer">
-          تأكيد وإضافة إلى الغيمة ✨
-        </button>
-      </div>
-    </div>
-  </div>
+  </main>
 
   <script>
-    // مسار أو رابط صورة الشهادة (افتراضياً IMG_1237.jpeg في نفس مجلد index.html)
     const CERTIFICATE_IMAGE_SRC = 'IMG_1237.jpeg';
 
-    const ORB_ITEMS = [
-      {
-        id: 'pos-listen',
-        label: 'الاستماع باهتمام',
-        type: 'positive',
-        proofType: 'listen',
-        prompt: 'اختر «الانعكاس الصادق» لكلام الطفل الذي يُظهر الإصغاء الحقيقي دون مقاطعة أو حكم، ثم فعّل الإصغاء:',
-        options: [
-          { id: 'l1', text: '«أسمع أنك شعرت بالإحباط حين لم يكتمل البرج، وتريد أن تحاول مجدداً بطريقتك.»', valid: true },
-          { id: 'l2', text: '«قلت لك مسبقاً لا تبنِ عالياً بسرعة، هيا اتركه الآن.»', valid: false },
-          { id: 'l3', text: '«هذا سبب بسيط لا يستحق كل هذا الزعل.»', valid: false }
-        ],
-        confirmText: 'تفعيل الإصغاء ✨',
-        icon: `<svg class="w-5 h-5 text-amber-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M8 7v10M16 7v10M4 10v4M20 10v4" stroke-linecap="round"/></svg>`
-      },
-      {
-        id: 'pos-encourage',
-        label: 'التشجيع المستمر',
-        type: 'positive',
-        proofType: 'encourage',
-        prompt: 'حوّل العبارة الجافة («جيد») إلى رسالة تشجيع حقيقية تركز على الجهد والمحاولة بدمج عنصرين داعمين:',
-        chips: [
-          { id: 'c1', text: 'أعجبتني محاولتك', valid: true },
-          { id: 'c2', text: 'لاحظت صبرك', valid: true },
-          { id: 'c3', text: 'أنت أفضل من غيرك', valid: false }
-        ],
-        confirmText: 'إرسال التشجيع للغيمة ✨',
-        icon: `<svg class="w-5 h-5 text-amber-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>`
-      },
-      {
-        id: 'pos-play',
-        label: 'حق اللعب والاكتشاف',
-        type: 'positive',
-        proofType: 'play',
-        prompt: 'حرّك «مؤشر مساحة اللعب الحر» لرفع نسبة اللعب والاستكشاف الحر فوق 75% بدلاً من تقييد كل دقيقة بجدول صارم:',
-        confirmText: 'تثبيت مساحة اللعب ✨',
-        icon: `<svg class="w-5 h-5 text-amber-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18M3 12h18"/></svg>`
-      },
-      {
-        id: 'pos-respect',
-        label: 'الاحترام والتقدير',
-        type: 'positive',
-        proofType: 'respect',
-        prompt: 'اختر الموقف الذي يحفظ كرامة الطفل ويُظهر الاحترام المتبادل عند إبداء الرأي أو الاعتذار بصدق:',
-        options: [
-          { id: 'r1', text: '«أعتذر لأنني رفعت صوتي دون قصد، رأيك يهمني وأريد أن أفهم وجهة نظرك.»', valid: true },
-          { id: 'r2', text: '«أنا الكبير وأنا أقرر، لا داعي لأن تشرح موقفك.»', valid: false },
-          { id: 'r3', text: '«تصرفك كان غريباً أمام الجميع.»', valid: false }
-        ],
-        confirmText: 'تأكيد الاحترام والتقدير ✨',
-        icon: `<svg class="w-5 h-5 text-amber-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z"/></svg>`
-      },
-      {
-        id: 'pos-safety',
-        label: 'الأمان والاحتواء',
-        type: 'positive',
-        proofType: 'safety',
-        prompt: 'هدّئ «موجة التوتر» بسحب المؤشر نحو اليمين حتى يستقر على «هدوء وطمأنينة» ليجد الطفل ملاذاً آمناً:',
-        confirmText: 'تفعيل ملاذ الطمأنينة ✨',
-        icon: `<svg class="w-5 h-5 text-amber-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`
-      },
-      {
-        id: 'pos-expression',
-        label: 'حرية التعبير',
-        type: 'positive',
-        proofType: 'expression',
-        prompt: 'افتح المجال للطفل ليعبّر عن شعوره دون قمع أو استباق باختيار البداية الداعمة وإضافة لمسة شعورية:',
-        starters: [
-          { id: 'e1', text: '«أخبرني بما تشعر به الآن...»', valid: true },
-          { id: 'e2', text: '«يجب أن تشعر بالسعادة فوراً.»', valid: false }
-        ],
-        feelings: ['فضول واكتشاف', 'حماس ودهشة', 'هدوء وسكينة'],
-        confirmText: 'فتح مساحة التعبير ✨',
-        icon: `<svg class="w-5 h-5 text-amber-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`
-      },
-      {
-        id: 'neg-compare',
-        label: 'المقارنة بالآخرين',
-        type: 'negative',
-        message: 'المقارنة تُضعف ثقة الطفل بنفسه وتُطفئ تميّزه',
-        icon: `<svg class="w-4 h-4 text-slate-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>`
-      },
-      {
-        id: 'neg-shout',
-        label: 'الصراخ والتخويف',
-        type: 'negative',
-        message: 'الصراخ والتخويف يزرعان الخوف ويحجبان صوت الأمان',
-        icon: `<svg class="w-4 h-4 text-amber-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`
-      },
-      {
-        id: 'neg-mock',
-        label: 'السخرية والاستهزاء',
-        type: 'negative',
-        message: 'السخرية والاستهزاء يجرحان مشاعر الطفل ويكسران جرأته',
-        icon: `<svg class="w-4 h-4 text-slate-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>`
-      },
-      {
-        id: 'neg-ignore',
-        label: 'التجاهل والإهمال',
-        type: 'negative',
-        message: 'الطفل يزدهر حين يشعر بأن صوته مسموع ومُقدَّر',
-        icon: `<svg class="w-4 h-4 text-slate-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M1 1l22 22"/></svg>`
-      }
+    const PILLARS = [
+      { id: 1, label: 'حق التعليم', icon: '📚' },
+      { id: 2, label: 'الأمان والحماية', icon: '🛡️' },
+      { id: 3, label: 'الصحة والرعاية', icon: '💚' },
+      { id: 4, label: 'اللعب والإبداع', icon: '🎨' },
+      { id: 5, label: 'صوت مسموع', icon: '🌟' }
     ];
 
-    const TOTAL_STAGES = 6;
     let participantName = '';
-    let illuminatedCount = 0;
-    let resolvedSet = new Set();
-    let activeOrbs = [];
-    let pendingOrb = null;
-    let proofState = {};
-    let messageTimer = null;
-    let starsInitialized = false;
-    let floatStarted = false;
+    const litIds = new Set();
 
-    const homeView = document.getElementById('home-view');
-    const experienceView = document.getElementById('experience-view');
-    const skyBackdrop = document.getElementById('sky-backdrop');
-    const starsCanvas = document.getElementById('stars-canvas');
-    const fxCanvas = document.getElementById('fx-canvas');
-    const hudStars = document.getElementById('hud-stars');
-    const hudCounter = document.getElementById('hud-counter');
-    const centralCloudWrapper = document.getElementById('central-cloud-wrapper');
-    const cloudAuraCircle = document.getElementById('cloud-aura-circle');
-    const pastelRainbow = document.getElementById('pastel-rainbow');
-    const orbitStarsContainer = document.getElementById('orbit-stars-container');
-    const orbsLayer = document.getElementById('orbs-layer');
-    const stormMessage = document.getElementById('storm-message');
-    const stormMessageText = document.getElementById('storm-message-text');
+    const screenIntro = document.getElementById('screen-intro');
+    const screenPlay = document.getElementById('screen-play');
+    const screenCert = document.getElementById('screen-cert');
+    const nameInput = document.getElementById('name-input');
+    const startBtn = document.getElementById('start-btn');
+    const skyBoard = document.getElementById('sky-board');
+    const progressText = document.getElementById('progress-text');
+    const progressFill = document.getElementById('progress-fill');
+    const toCertBtn = document.getElementById('to-cert-btn');
+    const backIntroBtn = document.getElementById('back-intro-btn');
+    const certBgImg = document.getElementById('cert-bg-img');
+    const certNameDisplay = document.getElementById('cert-name-display');
+    const missingImageBox = document.getElementById('missing-image-box');
+    const saveCertBtn = document.getElementById('save-cert-btn');
+    const restartBtn = document.getElementById('restart-btn');
+    const saveStatus = document.getElementById('save-status');
 
-    const namePromptOverlay = document.getElementById('name-prompt-overlay');
-    const userNameInput = document.getElementById('user-name-input');
-    const namePromptError = document.getElementById('name-prompt-error');
-    const btnSubmitName = document.getElementById('btn-submit-name');
-
-    const endOverlay = document.getElementById('end-overlay');
-    const certBgImage = document.getElementById('cert-bg-image');
-    const certRecipientName = document.getElementById('cert-recipient-name');
-    const certImgFallback = document.getElementById('cert-img-fallback');
-    const btnDownloadCert = document.getElementById('btn-download-cert');
-    const btnReplay = document.getElementById('btn-replay');
-    const btnBackHome = document.getElementById('btn-back-home');
-
-    const skillProofOverlay = document.getElementById('skill-proof-overlay');
-    const skillProofCard = document.getElementById('skill-proof-card');
-    const skillProofIcon = document.getElementById('skill-proof-icon');
-    const skillProofTitle = document.getElementById('skill-proof-title');
-    const skillProofPrompt = document.getElementById('skill-proof-prompt');
-    const skillProofBody = document.getElementById('skill-proof-body');
-    const skillProofFeedback = document.getElementById('skill-proof-feedback');
-    const btnCloseSkill = document.getElementById('btn-close-skill');
-    const btnConfirmSkill = document.getElementById('btn-confirm-skill');
-
-    certBgImage.src = CERTIFICATE_IMAGE_SRC;
-    certBgImage.addEventListener('error', () => {
-      certImgFallback.classList.remove('hidden');
-    });
-    certBgImage.addEventListener('load', () => {
-      certImgFallback.classList.add('hidden');
-    });
-
-    const beams = [];
-    const sparkles = [];
-    const fxCtx = fxCanvas.getContext('2d');
-
-    function resizeFxCanvas() {
-      fxCanvas.width = window.innerWidth;
-      fxCanvas.height = window.innerHeight;
-    }
-    resizeFxCanvas();
-    window.addEventListener('resize', resizeFxCanvas);
-
-    function initStarsCanvas() {
-      if (starsInitialized) return;
-      starsInitialized = true;
-      const ctx = starsCanvas.getContext('2d');
-      let width = (starsCanvas.width = window.innerWidth);
-      let height = (starsCanvas.height = window.innerHeight);
-
-      const starCount = Math.min(95, Math.floor((width * height) / 14000));
-      const bgStars = Array.from({ length: starCount }, () => ({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        r: 0.7 + Math.random() * 1.8,
-        phase: Math.random() * Math.PI * 2,
-        speed: 0.015 + Math.random() * 0.025
-      }));
-
-      window.addEventListener('resize', () => {
-        width = starsCanvas.width = window.innerWidth;
-        height = starsCanvas.height = window.innerHeight;
-      });
-
-      function drawStars() {
-        ctx.clearRect(0, 0, width, height);
-        const stage = Number(skyBackdrop.getAttribute('data-stage') || 0);
-        const skyFade = Math.max(0.12, 1 - stage * 0.14);
-
-        bgStars.forEach(s => {
-          s.phase += s.speed;
-          const alpha = (0.25 + 0.75 * ((Math.sin(s.phase) + 1) / 2)) * skyFade;
-          ctx.beginPath();
-          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255, 252, 235, ${alpha.toFixed(3)})`;
-          ctx.fill();
-        });
-        requestAnimationFrame(drawStars);
-      }
-      drawStars();
+    function showScreen(targetScreen) {
+      [screenIntro, screenPlay, screenCert].forEach((s) => s.classList.remove('active'));
+      targetScreen.classList.add('active');
     }
 
-    function spawnLightBeam(startX, startY, endX, endY) {
-      beams.push({ x1: startX, y1: startY, x2: endX, y2: endY, progress: 0, alpha: 1 });
-      for (let i = 0; i < 28; i++) {
-        const t = Math.random();
-        const px = startX + (endX - startX) * t + (Math.random() - 0.5) * 30;
-        const py = startY + (endY - startY) * t + (Math.random() - 0.5) * 30;
-        sparkles.push({
-          x: px,
-          y: py,
-          vx: (Math.random() - 0.5) * 3.5,
-          vy: (Math.random() - 0.5) * 3.5 - 0.8,
-          size: 3 + Math.random() * 5,
-          alpha: 1,
-          decay: 0.014 + Math.random() * 0.015,
-          color: Math.random() > 0.35 ? '#FDE047' : '#FFFFFF'
-        });
-      }
-    }
-
-    function spawnCelebrationBurst() {
-      const cx = window.innerWidth / 2;
-      const cy = window.innerHeight / 2;
-      const palette = ['#FDE047', '#F9A8D4', '#C4B5FD', '#6EE7B7', '#FFFFFF'];
-
-      for (let i = 0; i < 90; i++) {
-        const angle = Math.random() * Math.PI * 2;
-        const speed = 1.5 + Math.random() * 5.5;
-        sparkles.push({
-          x: cx + (Math.random() - 0.5) * 140,
-          y: cy + (Math.random() - 0.5) * 100,
-          vx: Math.cos(angle) * speed,
-          vy: Math.sin(angle) * speed - 1.2,
-          size: 4 + Math.random() * 6,
-          alpha: 1,
-          decay: 0.008 + Math.random() * 0.01,
-          color: palette[Math.floor(Math.random() * palette.length)]
-        });
-      }
-    }
-
-    function drawFourPointStar(ctx, x, y, r, color, alpha) {
-      ctx.save();
-      ctx.globalAlpha = Math.max(0, alpha);
-      ctx.fillStyle = color;
-      ctx.beginPath();
-      for (let i = 0; i < 4; i++) {
-        const a = (i * Math.PI) / 2;
-        ctx.lineTo(x + Math.cos(a) * r, y + Math.sin(a) * r);
-        ctx.lineTo(x + Math.cos(a + Math.PI / 4) * (r * 0.35), y + Math.sin(a + Math.PI / 4) * (r * 0.35));
-      }
-      ctx.closePath();
-      ctx.fill();
-      ctx.restore();
-    }
-
-    function runFxLoop() {
-      fxCtx.clearRect(0, 0, fxCanvas.width, fxCanvas.height);
-
-      for (let i = beams.length - 1; i >= 0; i--) {
-        const b = beams[i];
-        b.progress = Math.min(1, b.progress + 0.075);
-        if (b.progress >= 1) b.alpha -= 0.035;
-
-        const curX = b.x1 + (b.x2 - b.x1) * b.progress;
-        const curY = b.y1 + (b.y2 - b.y1) * b.progress;
-
-        const grad = fxCtx.createLinearGradient(b.x1, b.y1, curX, curY);
-        grad.addColorStop(0, `rgba(255, 255, 255, ${b.alpha * 0.15})`);
-        grad.addColorStop(0.6, `rgba(253, 224, 71, ${b.alpha * 0.75})`);
-        grad.addColorStop(1, `rgba(255, 255, 255, ${b.alpha})`);
-
-        fxCtx.save();
-        fxCtx.strokeStyle = grad;
-        fxCtx.lineWidth = 6;
-        fxCtx.lineCap = 'round';
-        fxCtx.shadowColor = '#FDE047';
-        fxCtx.shadowBlur = 18;
-        fxCtx.beginPath();
-        fxCtx.moveTo(b.x1, b.y1);
-        fxCtx.lineTo(curX, curY);
-        fxCtx.stroke();
-        fxCtx.restore();
-
-        if (b.alpha <= 0) beams.splice(i, 1);
-      }
-
-      for (let i = sparkles.length - 1; i >= 0; i--) {
-        const p = sparkles[i];
-        p.x += p.vx;
-        p.y += p.vy;
-        p.vy += 0.02;
-        p.alpha -= p.decay;
-
-        if (p.alpha <= 0) {
-          sparkles.splice(i, 1);
-        } else {
-          drawFourPointStar(fxCtx, p.x, p.y, p.size, p.color, p.alpha);
-        }
-      }
-
-      requestAnimationFrame(runFxLoop);
-    }
-    runFxLoop();
-
-    function updateSkyAndHud() {
-      skyBackdrop.setAttribute('data-stage', String(illuminatedCount));
-      hudCounter.textContent = `${illuminatedCount} / ${TOTAL_STAGES}`;
-
-      hudStars.innerHTML = '';
-      for (let i = 1; i <= TOTAL_STAGES; i++) {
-        const lit = i <= illuminatedCount;
-        const span = document.createElement('span');
-        span.innerHTML = `
-          <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 ${lit ? 'text-amber-300 scale-110 drop-shadow-[0_0_6px_rgba(253,224,71,0.85)]' : 'text-white/30'}" viewBox="0 0 24 24" fill="${lit ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
-            <polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/>
-          </svg>
+    function renderStars() {
+      skyBoard.innerHTML = '';
+      PILLARS.forEach((pillar) => {
+        const node = document.createElement('button');
+        node.type = 'button';
+        node.className = 'star-node' + (litIds.has(pillar.id) ? ' lit' : '');
+        node.innerHTML = `
+          <span class="star-icon">${litIds.has(pillar.id) ? '✨' : pillar.icon}</span>
+          <span class="star-label">${pillar.label}</span>
         `;
-        hudStars.appendChild(span);
-      }
-
-      const ratio = illuminatedCount / TOTAL_STAGES;
-      cloudAuraCircle.setAttribute('opacity', (0.15 + ratio * 0.85).toFixed(2));
-      pastelRainbow.setAttribute('opacity', (ratio * 0.92).toFixed(2));
-      pastelRainbow.style.transform = `scale(${0.86 + ratio * 0.14})`;
-    }
-
-    function triggerStormMessage(text) {
-      if (messageTimer) clearTimeout(messageTimer);
-      stormMessageText.textContent = text;
-      stormMessage.classList.remove('opacity-0', '-translate-y-2');
-      stormMessage.classList.add('opacity-100', 'translate-y-0');
-
-      messageTimer = setTimeout(() => {
-        stormMessage.classList.remove('opacity-100', 'translate-y-0');
-        stormMessage.classList.add('opacity-0', '-translate-y-2');
-      }, 3000);
-    }
-
-    function showCertificateScreen() {
-      certRecipientName.textContent = participantName;
-      spawnCelebrationBurst();
-      endOverlay.classList.remove('hidden');
-    }
-
-    function commitPositiveOrbToCloud(orbObj) {
-      if (resolvedSet.has(orbObj.data.id)) return;
-      resolvedSet.add(orbObj.data.id);
-
-      const orbRect = orbObj.el.getBoundingClientRect();
-      const orbCenterX = orbRect.left + orbRect.width / 2;
-      const orbCenterY = orbRect.top + orbRect.height / 2;
-
-      const cloudRect = centralCloudWrapper.getBoundingClientRect();
-      const cloudCenterX = cloudRect.left + cloudRect.width / 2;
-      const cloudCenterY = cloudRect.top + cloudRect.height / 2;
-
-      illuminatedCount++;
-
-      spawnLightBeam(orbCenterX, orbCenterY, cloudCenterX, cloudCenterY);
-
-      const fogEl = document.getElementById(`fog-${illuminatedCount}`);
-      if (fogEl) fogEl.classList.add('fog-dispersed');
-
-      updateSkyAndHud();
-
-      const starBadge = document.createElement('div');
-      starBadge.className = 'orbit-star-badge pointer-events-none flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-extrabold';
-      starBadge.innerHTML = `
-        <svg class="w-4 h-4 text-amber-500 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-          <polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/>
-        </svg>
-        <span>${orbObj.data.label}</span>
-      `;
-      orbitStarsContainer.appendChild(starBadge);
-
-      orbObj.el.style.opacity = '0';
-      orbObj.el.style.transform = 'scale(0.4)';
-      orbObj.el.style.pointerEvents = 'none';
-      setTimeout(() => orbObj.el.remove(), 450);
-
-      if (illuminatedCount === TOTAL_STAGES) {
-        setTimeout(() => {
-          showCertificateScreen();
-        }, 1150);
-      }
-    }
-
-    function openSkillProofModal(orbObj) {
-      if (resolvedSet.has(orbObj.data.id) || pendingOrb) return;
-      pendingOrb = orbObj;
-      proofState = {};
-      skillProofFeedback.textContent = '';
-
-      const item = orbObj.data;
-      skillProofIcon.innerHTML = item.icon;
-      skillProofTitle.textContent = item.label;
-      skillProofPrompt.textContent = item.prompt;
-      btnConfirmSkill.textContent = item.confirmText || 'تأكيد وإضافة إلى الغيمة ✨';
-      skillProofBody.innerHTML = '';
-
-      if (item.proofType === 'listen' || item.proofType === 'respect') {
-        proofState.selectedOptionId = null;
-        item.options.forEach(opt => {
-          const btn = document.createElement('button');
-          btn.type = 'button';
-          btn.className = 'w-full text-right p-3.5 rounded-2xl border-2 border-purple-200/80 bg-white/85 hover:bg-purple-50 text-xs sm:text-sm font-bold text-slate-800 transition cursor-pointer';
-          btn.textContent = opt.text;
-          btn.addEventListener('click', () => {
-            proofState.selectedOptionId = opt.id;
-            skillProofFeedback.textContent = '';
-            skillProofBody.querySelectorAll('button').forEach(b => {
-              b.classList.remove('border-purple-600', 'bg-purple-100/90', 'ring-2', 'ring-purple-300');
-              b.classList.add('border-purple-200/80', 'bg-white/85');
-            });
-            btn.classList.remove('border-purple-200/80', 'bg-white/85');
-            btn.classList.add('border-purple-600', 'bg-purple-100/90', 'ring-2', 'ring-purple-300');
-          });
-          skillProofBody.appendChild(btn);
+        node.addEventListener('click', () => {
+          litIds.add(pillar.id);
+          node.classList.add('lit');
+          node.querySelector('.star-icon').textContent = '✨';
+          updateProgress();
         });
-      } else if (item.proofType === 'encourage') {
-        proofState.selectedChips = new Set();
-        const previewBox = document.createElement('div');
-        previewBox.className = 'p-3.5 rounded-2xl bg-purple-900/5 border border-purple-200 text-xs sm:text-sm font-extrabold text-purple-950 min-h-[3.2rem] flex items-center justify-center text-center';
-        previewBox.id = 'encourage-preview';
-        previewBox.textContent = 'العبارة الحالية: «جيد» — اختر عنصرين داعمين للجهد والمحاولة';
-        skillProofBody.appendChild(previewBox);
-
-        const chipsWrap = document.createElement('div');
-        chipsWrap.className = 'flex flex-wrap gap-2 justify-center pt-1';
-
-        item.chips.forEach(ch => {
-          const chipBtn = document.createElement('button');
-          chipBtn.type = 'button';
-          chipBtn.className = 'px-4 py-2 rounded-full border-2 border-purple-200 bg-white text-xs sm:text-sm font-extrabold text-indigo-950 transition cursor-pointer';
-          chipBtn.textContent = ch.text;
-
-          chipBtn.addEventListener('click', () => {
-            skillProofFeedback.textContent = '';
-            if (proofState.selectedChips.has(ch.id)) {
-              proofState.selectedChips.delete(ch.id);
-              chipBtn.classList.remove('border-purple-600', 'bg-purple-600', 'text-white');
-              chipBtn.classList.add('border-purple-200', 'bg-white', 'text-indigo-950');
-            } else {
-              proofState.selectedChips.add(ch.id);
-              chipBtn.classList.remove('border-purple-200', 'bg-white', 'text-indigo-950');
-              chipBtn.classList.add('border-purple-600', 'bg-purple-600', 'text-white');
-            }
-
-            const chosenTexts = item.chips
-              .filter(c => proofState.selectedChips.has(c.id))
-              .map(c => c.text);
-            previewBox.textContent = chosenTexts.length
-              ? `رسالة التشجيع: «${chosenTexts.join(' + ')}»`
-              : 'العبارة الحالية: «جيد» — اختر عنصرين داعمين للجهد والمحاولة';
-          });
-          chipsWrap.appendChild(chipBtn);
-        });
-
-        skillProofBody.appendChild(chipsWrap);
-      } else if (item.proofType === 'play') {
-        proofState.playValue = 30;
-        const meterLabel = document.createElement('div');
-        meterLabel.className = 'flex items-center justify-between text-xs sm:text-sm font-extrabold text-purple-950 mb-1';
-        meterLabel.innerHTML = `<span>مساحة اللعب الحر</span><span id="play-percent-val" class="px-3 py-1 rounded-full bg-amber-200/80 text-indigo-950">30% (مقيّد)</span>`;
-
-        const slider = document.createElement('input');
-        slider.type = 'range';
-        slider.min = '0';
-        slider.max = '100';
-        slider.value = '30';
-        slider.className = 'pastel-slider';
-
-        slider.addEventListener('input', () => {
-          const val = Number(slider.value);
-          proofState.playValue = val;
-          skillProofFeedback.textContent = '';
-          const badge = document.getElementById('play-percent-val');
-          if (badge) {
-            const tag = val >= 75 ? 'مساحة حرة واسعة' : val >= 45 ? 'توازن جزئي' : 'مقيّد';
-            badge.textContent = `${val}% (${tag})`;
-          }
-        });
-
-        skillProofBody.appendChild(meterLabel);
-        skillProofBody.appendChild(slider);
-      } else if (item.proofType === 'safety') {
-        proofState.calmValue = 15;
-        const waveBox = document.createElement('div');
-        waveBox.className = 'p-4 rounded-2xl bg-indigo-950/90 text-white text-center space-y-2';
-        waveBox.innerHTML = `
-          <div id="calm-wave-status" class="text-xs sm:text-sm font-extrabold text-amber-300">موجة التوتر مرتفعة (15% طمأنينة)</div>
-          <svg class="w-full h-12" viewBox="0 0 320 48" fill="none">
-            <path id="calm-wave-path" d="M0 24 Q 20 2, 40 24 T 80 24 T 120 24 T 160 24 T 200 24 T 240 24 T 280 24 T 320 24" stroke="#FDE047" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-        `;
-
-        const slider = document.createElement('input');
-        slider.type = 'range';
-        slider.min = '0';
-        slider.max = '100';
-        slider.value = '15';
-        slider.className = 'pastel-slider';
-
-        slider.addEventListener('input', () => {
-          const val = Number(slider.value);
-          proofState.calmValue = val;
-          skillProofFeedback.textContent = '';
-          const statusEl = document.getElementById('calm-wave-status');
-          const pathEl = document.getElementById('calm-wave-path');
-          if (statusEl) {
-            statusEl.textContent = val >= 75
-              ? `هدوء وطمأنينة (${val}% أمان)`
-              : `تهدئة الموجة تدريجياً (${val}% طمأنينة)`;
-            statusEl.className = val >= 75
-              ? 'text-xs sm:text-sm font-extrabold text-emerald-300'
-              : 'text-xs sm:text-sm font-extrabold text-amber-300';
-          }
-          if (pathEl) {
-            const amp = Math.max(2.5, 20 * (1 - val / 100));
-            pathEl.setAttribute(
-              'd',
-              `M0 24 Q 20 ${24 - amp}, 40 24 T 80 24 T 120 24 T 160 24 T 200 24 T 240 24 T 280 24 T 320 24`
-            );
-            pathEl.setAttribute('stroke', val >= 75 ? '#86EFAC' : '#FDE047');
-          }
-        });
-
-        skillProofBody.appendChild(waveBox);
-        skillProofBody.appendChild(slider);
-      } else if (item.proofType === 'expression') {
-        proofState.selectedStarterId = null;
-        proofState.selectedFeeling = item.feelings[0];
-
-        item.starters.forEach(st => {
-          const sBtn = document.createElement('button');
-          sBtn.type = 'button';
-          sBtn.className = 'starter-btn w-full text-right p-3 rounded-2xl border-2 border-purple-200 bg-white text-xs sm:text-sm font-extrabold text-indigo-950 transition cursor-pointer';
-          sBtn.textContent = st.text;
-          sBtn.addEventListener('click', () => {
-            proofState.selectedStarterId = st.id;
-            skillProofFeedback.textContent = '';
-            skillProofBody.querySelectorAll('.starter-btn').forEach(b => {
-              b.classList.remove('border-purple-600', 'bg-purple-100');
-              b.classList.add('border-purple-200', 'bg-white');
-            });
-            sBtn.classList.remove('border-purple-200', 'bg-white');
-            sBtn.classList.add('border-purple-600', 'bg-purple-100');
-          });
-          skillProofBody.appendChild(sBtn);
-        });
-
-        const feelingsRow = document.createElement('div');
-        feelingsRow.className = 'flex flex-wrap gap-2 pt-1 justify-center';
-        item.feelings.forEach(fText => {
-          const fBtn = document.createElement('button');
-          fBtn.type = 'button';
-          const isDefault = fText === proofState.selectedFeeling;
-          fBtn.className = `feeling-btn px-3.5 py-1.5 rounded-full text-xs font-extrabold border transition cursor-pointer ${
-            isDefault ? 'bg-amber-300 border-amber-400 text-indigo-950' : 'bg-white/80 border-purple-200 text-slate-700'
-          }`;
-          fBtn.textContent = fText;
-          fBtn.addEventListener('click', () => {
-            proofState.selectedFeeling = fText;
-            skillProofBody.querySelectorAll('.feeling-btn').forEach(b => {
-              b.className = 'feeling-btn px-3.5 py-1.5 rounded-full text-xs font-extrabold border transition cursor-pointer bg-white/80 border-purple-200 text-slate-700';
-            });
-            fBtn.className = 'feeling-btn px-3.5 py-1.5 rounded-full text-xs font-extrabold border transition cursor-pointer bg-amber-300 border-amber-400 text-indigo-950';
-          });
-          feelingsRow.appendChild(fBtn);
-        });
-        skillProofBody.appendChild(feelingsRow);
-      }
-
-      skillProofOverlay.classList.remove('hidden');
-      skillProofOverlay.classList.remove('opacity-0');
-    }
-
-    function closeSkillProofModal() {
-      skillProofOverlay.classList.add('hidden');
-      pendingOrb = null;
-      proofState = {};
-      skillProofFeedback.textContent = '';
-    }
-
-    function handleConfirmSkillProof() {
-      if (!pendingOrb) return;
-      const item = pendingOrb.data;
-      let passed = false;
-      let errMsg = '';
-
-      if (item.proofType === 'listen' || item.proofType === 'respect') {
-        const chosen = item.options.find(o => o.id === proofState.selectedOptionId);
-        if (!chosen) errMsg = 'اختر جملة أولاً لتُثبت أسلوبك في التعامل.';
-        else if (!chosen.valid) errMsg = 'هذه العبارة تقاطع أو تحكم؛ جرّب العبارة التي تحفظ مشاعر الطفل وكرامته.';
-        else passed = true;
-      } else if (item.proofType === 'encourage') {
-        const chosenChips = item.chips.filter(c => proofState.selectedChips && proofState.selectedChips.has(c.id));
-        const hasInvalid = chosenChips.some(c => !c.valid);
-        if (chosenChips.length < 2) errMsg = 'اختر عنصرين إيجابيين يركزان على الجهد والصبر.';
-        else if (hasInvalid) errMsg = 'المقارنة بالآخرين تُضعف الثقة؛ اختر «أعجبتني محاولتك» و«لاحظت صبرك».';
-        else passed = true;
-      } else if (item.proofType === 'play') {
-        if ((proofState.playValue || 0) >= 75) passed = true;
-        else errMsg = 'حرّك المؤشر إلى 75% أو أكثر لفتح مساحة واسعة للعب الحر.';
-      } else if (item.proofType === 'safety') {
-        if ((proofState.calmValue || 0) >= 75) passed = true;
-        else errMsg = 'اسحب المؤشر نحو اليمين حتى تصل الموجة إلى «هدوء وطمأنينة» (75% فأعلى).';
-      } else if (item.proofType === 'expression') {
-        const chosenStarter = item.starters.find(s => s.id === proofState.selectedStarterId);
-        if (!chosenStarter) errMsg = 'اختر بداية تفتح المجال للطفل للتعبير بحرية.';
-        else if (!chosenStarter.valid) errMsg = 'فرض شعور معين يقيّد الطفل؛ اختر «أخبرني بما تشعر به الآن...».';
-        else passed = true;
-      }
-
-      if (!passed) {
-        skillProofFeedback.textContent = errMsg;
-        skillProofCard.classList.remove('nudge-shake');
-        void skillProofCard.offsetWidth;
-        skillProofCard.classList.add('nudge-shake');
-        return;
-      }
-
-      const targetOrb = pendingOrb;
-      closeSkillProofModal();
-      commitPositiveOrbToCloud(targetOrb);
-    }
-
-    function activateOrb(orbObj) {
-      if (resolvedSet.has(orbObj.data.id)) return;
-
-      if (orbObj.data.type === 'positive') {
-        openSkillProofModal(orbObj);
-      } else {
-        resolvedSet.add(orbObj.data.id);
-        triggerStormMessage(orbObj.data.message);
-        orbObj.el.classList.add('orb-storm-evaporate');
-
-        setTimeout(() => {
-          orbObj.el.style.opacity = '0';
-          orbObj.el.style.transform = 'scale(1.25)';
-          setTimeout(() => orbObj.el.remove(), 400);
-        }, 460);
-      }
-    }
-
-    function getOrbitalPositions(count) {
-      const vw = window.innerWidth;
-      const vh = window.innerHeight;
-      const cx = vw / 2;
-      const cy = vh / 2 + 10;
-
-      const isMobile = vw < 640;
-      const rx = isMobile ? Math.min(vw * 0.37, 155) : Math.min(vw * 0.36, 360);
-      const ry = isMobile ? Math.min(vh * 0.34, 245) : Math.min(vh * 0.33, 240);
-
-      const positions = [];
-      for (let i = 0; i < count; i++) {
-        const angle = (i / count) * Math.PI * 2 - Math.PI / 2;
-        const x = cx + Math.cos(angle) * rx;
-        const y = cy + Math.sin(angle) * ry;
-        positions.push({
-          baseX: Math.max(58, Math.min(vw - 58, x)),
-          baseY: Math.max(92, Math.min(vh - 58, y)),
-          phaseX: Math.random() * Math.PI * 2,
-          phaseY: Math.random() * Math.PI * 2,
-          speedX: 0.012 + Math.random() * 0.01,
-          speedY: 0.015 + Math.random() * 0.01,
-          ampX: isMobile ? 6 : 11,
-          ampY: isMobile ? 7 : 12
-        });
-      }
-      return positions;
-    }
-
-    function shuffle(list) {
-      const arr = [...list];
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    function spawnOrbs() {
-      orbsLayer.innerHTML = '';
-      activeOrbs = [];
-
-      const shuffledItems = shuffle(ORB_ITEMS);
-      const slots = getOrbitalPositions(shuffledItems.length);
-
-      shuffledItems.forEach((item, index) => {
-        const slot = slots[index];
-        const el = document.createElement('button');
-        el.type = 'button';
-        el.className = `glass-orb pointer-events-auto flex items-center justify-center gap-1.5 px-4 py-2.5 sm:px-5 sm:py-3 text-sm sm:text-base font-extrabold ${
-          item.type === 'positive' ? 'orb-positive' : 'orb-negative'
-        }`;
-        el.innerHTML = `${item.icon}<span>${item.label}</span>`;
-
-        orbsLayer.appendChild(el);
-
-        const orbObj = {
-          data: item,
-          el,
-          baseX: slot.baseX,
-          baseY: slot.baseY,
-          currentX: slot.baseX,
-          currentY: slot.baseY,
-          phaseX: slot.phaseX,
-          phaseY: slot.phaseY,
-          speedX: slot.speedX,
-          speedY: slot.speedY,
-          ampX: slot.ampX,
-          ampY: slot.ampY,
-          isDragging: false
-        };
-
-        el.style.left = `${orbObj.currentX}px`;
-        el.style.top = `${orbObj.currentY}px`;
-        el.style.transform = 'translate(-50%, -50%)';
-
-        attachOrbPointerEvents(orbObj);
-        activeOrbs.push(orbObj);
+        skyBoard.appendChild(node);
       });
+      updateProgress();
     }
 
-    function attachOrbPointerEvents(orbObj) {
-      const el = orbObj.el;
-      let startPointerX = 0;
-      let startPointerY = 0;
-      let hasMoved = false;
-
-      el.addEventListener('pointerdown', (e) => {
-        if (resolvedSet.has(orbObj.data.id)) return;
-        if (e.pointerType === 'mouse' && e.button !== 0) return;
-
-        startPointerX = e.clientX;
-        startPointerY = e.clientY;
-        hasMoved = false;
-        orbObj.isDragging = true;
-        el.classList.add('is-dragging');
-        el.setPointerCapture(e.pointerId);
-
-        const onMove = (ev) => {
-          const dx = ev.clientX - startPointerX;
-          const dy = ev.clientY - startPointerY;
-          if (Math.hypot(dx, dy) > 8) hasMoved = true;
-
-          orbObj.currentX = ev.clientX;
-          orbObj.currentY = ev.clientY;
-          el.style.left = `${ev.clientX}px`;
-          el.style.top = `${ev.clientY}px`;
-
-          if (orbObj.data.type === 'positive') {
-            const cRect = centralCloudWrapper.getBoundingClientRect();
-            const inside =
-              ev.clientX >= cRect.left &&
-              ev.clientX <= cRect.right &&
-              ev.clientY >= cRect.top &&
-              ev.clientY <= cRect.bottom;
-            centralCloudWrapper.classList.toggle('cloud-drop-active', inside);
-          }
-        };
-
-        const onUp = (ev) => {
-          el.releasePointerCapture(e.pointerId);
-          el.removeEventListener('pointermove', onMove);
-          el.removeEventListener('pointerup', onUp);
-          el.removeEventListener('pointercancel', onUp);
-
-          orbObj.isDragging = false;
-          el.classList.remove('is-dragging');
-          centralCloudWrapper.classList.remove('cloud-drop-active');
-
-          if (!hasMoved) {
-            activateOrb(orbObj);
-          } else {
-            const cRect = centralCloudWrapper.getBoundingClientRect();
-            const droppedOnCloud =
-              ev.clientX >= cRect.left - 20 &&
-              ev.clientX <= cRect.right + 20 &&
-              ev.clientY >= cRect.top - 20 &&
-              ev.clientY <= cRect.bottom + 20;
-
-            if (droppedOnCloud) {
-              activateOrb(orbObj);
-            } else {
-              orbObj.baseX = Math.max(60, Math.min(window.innerWidth - 60, ev.clientX));
-              orbObj.baseY = Math.max(90, Math.min(window.innerHeight - 60, ev.clientY));
-            }
-          }
-        };
-
-        el.addEventListener('pointermove', onMove);
-        el.addEventListener('pointerup', onUp);
-        el.addEventListener('pointercancel', onUp);
-      });
+    function updateProgress() {
+      const count = litIds.size;
+      const total = PILLARS.length;
+      progressText.textContent = `تم إضاءة ${count} من ${total} نجوم`;
+      progressFill.style.width = `${(count / total) * 100}%`;
+      toCertBtn.disabled = count < total;
     }
 
-    function animateOrbsFloat() {
-      activeOrbs.forEach(orb => {
-        if (orb.isDragging || resolvedSet.has(orb.data.id)) return;
-        orb.phaseX += orb.speedX;
-        orb.phaseY += orb.speedY;
-
-        const targetX = orb.baseX + Math.sin(orb.phaseX) * orb.ampX;
-        const targetY = orb.baseY + Math.cos(orb.phaseY) * orb.ampY;
-
-        orb.currentX += (targetX - orb.currentX) * 0.08;
-        orb.currentY += (targetY - orb.currentY) * 0.08;
-
-        orb.el.style.left = `${orb.currentX}px`;
-        orb.el.style.top = `${orb.currentY}px`;
-      });
-
-      requestAnimationFrame(animateOrbsFloat);
+    function setupCertificateImage() {
+      missingImageBox.classList.remove('visible');
+      certBgImg.src = CERTIFICATE_IMAGE_SRC;
+      certBgImg.onload = () => {
+        missingImageBox.classList.remove('visible');
+      };
+      certBgImg.onerror = () => {
+        missingImageBox.classList.add('visible');
+      };
     }
 
-    function resetExperience() {
-      illuminatedCount = 0;
-      resolvedSet.clear();
-      closeSkillProofModal();
-      orbitStarsContainer.innerHTML = '';
-      endOverlay.classList.add('hidden');
-
-      for (let i = 1; i <= TOTAL_STAGES; i++) {
-        const fog = document.getElementById(`fog-${i}`);
-        if (fog) fog.classList.remove('fog-dispersed');
-      }
-
-      updateSkyAndHud();
-      spawnOrbs();
-    }
-
-    function openNamePrompt() {
-      namePromptError.textContent = '';
-      userNameInput.value = '';
-      namePromptOverlay.classList.remove('hidden');
-      setTimeout(() => userNameInput.focus(), 60);
-    }
-
-    function openExperienceView() {
-      homeView.style.display = 'none';
-      experienceView.classList.add('active');
-      resizeFxCanvas();
-      initStarsCanvas();
-      resetExperience();
-      if (!floatStarted) {
-        floatStarted = true;
-        animateOrbsFloat();
-      }
-      openNamePrompt();
-      window.scrollTo({ top: 0, behavior: 'instant' });
-    }
-
-    function closeExperienceView() {
-      closeSkillProofModal();
-      namePromptOverlay.classList.add('hidden');
-      experienceView.classList.remove('active');
-      homeView.style.display = 'block';
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function submitParticipantName() {
-      const val = userNameInput.value.trim();
-      if (!val) {
-        namePromptError.textContent = 'اكتب اسمك أولاً.';
-        userNameInput.focus();
-        return;
-      }
-      participantName = val;
-      namePromptError.textContent = '';
-      namePromptOverlay.classList.add('hidden');
-    }
-
-    btnSubmitName.addEventListener('click', submitParticipantName);
-    userNameInput.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') submitParticipantName();
+    startBtn.addEventListener('click', () => {
+      const cleanName = nameInput.value.trim();
+      participantName = cleanName || 'صانع سماء الأمان';
+      litIds.clear();
+      renderStars();
+      showScreen(screenPlay);
     });
+
+    backIntroBtn.addEventListener('click', () => {
+      showScreen(screenIntro);
+    });
+
+    toCertBtn.addEventListener('click', () => {
+      certNameDisplay.textContent = participantName || 'صانع سماء الأمان';
+      saveStatus.textContent = '';
+      setupCertificateImage();
+      showScreen(screenCert);
+    });
+
+    restartBtn.addEventListener('click', () => {
+      litIds.clear();
+      saveStatus.textContent = '';
+      showScreen(screenIntro);
+    });
+
+    function openImageInNewTab(dataOrBlobUrl) {
+      const newTab = window.open();
+      if (newTab) {
+        newTab.document.write(`
+          <html dir="rtl" lang="ar">
+            <head>
+              <title>شهادة سماء الأمان</title>
+              <style>
+                body { margin: 0; background: #070919; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; font-family: sans-serif; color: #fff; padding: 16px; }
+                img { max-width: 100%; height: auto; border-radius: 14px; box-shadow: 0 12px 32px rgba(0,0,0,0.6); }
+                p { margin-top: 12px; color: #fde047; font-size: 15px; text-align: center; }
+              </style>
+            </head>
+            <body>
+              <img src="${dataOrBlobUrl}" alt="شهادة سماء الأمان" />
+              <p>اضغطي مطولاً على الصورة لحفظها في الصور</p>
+            </body>
+          </html>
+        `);
+        newTab.document.close();
+      }
+    }
 
     function downloadCertificateImage() {
+      saveStatus.textContent = 'جاري تجهيز الشهادة...';
       const canvas = document.createElement('canvas');
       canvas.width = 1200;
       canvas.height = 1600;
       const ctx = canvas.getContext('2d');
+
+      const fallbackDataUrlSave = (cvs, fileName) => {
+        const dataUrl = cvs.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.href = dataUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        saveStatus.textContent = 'تم تجهيز التحميل — تحققي من التنزيلات في المتصفح.';
+      };
 
       const triggerSave = () => {
         ctx.textAlign = 'center';
@@ -1639,58 +498,59 @@
         ctx.font = '900 72px Cairo, Tajawal, sans-serif';
         ctx.shadowColor = 'rgba(2, 6, 23, 0.92)';
         ctx.shadowBlur = 18;
-        ctx.fillText(participantName, 600, 712);
+        ctx.fillText(participantName || 'صانع سماء الأمان', 600, 712);
 
-        const link = document.createElement('a');
-        link.download = `شهادة-سماء-الأمان-${participantName.replace(/\s+/g, '-')}.png`;
-        link.href = canvas.toDataURL('image/png');
-        link.click();
+        const safeName = (participantName || 'certificate').trim().replace(/\s+/g, '-');
+        const fileName = `شهادة-سماء-الأمان-${safeName}.png`;
+
+        if (canvas.toBlob) {
+          canvas.toBlob((blob) => {
+            if (!blob) {
+              fallbackDataUrlSave(canvas, fileName);
+              return;
+            }
+            const blobUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            saveStatus.textContent = 'تم إرسال طلب الحفظ! إذا لم يظهر في التنزيلات فستُفتح الصورة للحفظ اليدوي.';
+            setTimeout(() => {
+              URL.revokeObjectURL(blobUrl);
+            }, 6000);
+          }, 'image/png');
+        } else {
+          fallbackDataUrlSave(canvas, fileName);
+        }
       };
 
-      if (certBgImage.complete && certBgImage.naturalWidth > 0) {
-        ctx.drawImage(certBgImage, 0, 0, canvas.width, canvas.height);
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         triggerSave();
-      } else {
-        const img = new Image();
-        img.crossOrigin = 'anonymous';
-        img.onload = () => {
-          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-          triggerSave();
-        };
-        img.onerror = () => {
+      };
+      img.onerror = () => {
+        if (certBgImg.complete && certBgImg.naturalWidth > 0) {
+          try {
+            ctx.drawImage(certBgImg, 0, 0, canvas.width, canvas.height);
+          } catch (e) {
+            ctx.fillStyle = '#0b0d24';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+          }
+        } else {
           ctx.fillStyle = '#0b0d24';
           ctx.fillRect(0, 0, canvas.width, canvas.height);
-          triggerSave();
-        };
-        img.src = CERTIFICATE_IMAGE_SRC;
-      }
+        }
+        triggerSave();
+      };
+      img.src = `${CERTIFICATE_IMAGE_SRC}?t=${Date.now()}`;
     }
 
-    btnDownloadCert.addEventListener('click', downloadCertificateImage);
-
-    document.querySelectorAll('.open-sky-btn').forEach(btn => {
-      btn.addEventListener('click', openExperienceView);
-    });
-
-    btnBackHome.addEventListener('click', closeExperienceView);
-    btnReplay.addEventListener('click', resetExperience);
-    btnCloseSkill.addEventListener('click', closeSkillProofModal);
-    btnConfirmSkill.addEventListener('click', handleConfirmSkillProof);
-
-    skillProofOverlay.addEventListener('click', (e) => {
-      if (e.target === skillProofOverlay) closeSkillProofModal();
-    });
-
-    window.addEventListener('resize', () => {
-      if (!experienceView.classList.contains('active')) return;
-      const slots = getOrbitalPositions(activeOrbs.length);
-      activeOrbs.forEach((orb, i) => {
-        if (slots[i]) {
-          orb.baseX = slots[i].baseX;
-          orb.baseY = slots[i].baseY;
-        }
-      });
-    });
+    saveCertBtn.addEventListener('click', downloadCertificateImage);
   </script>
 </body>
 </html>
